@@ -1,6 +1,6 @@
 import curses
 import random
-from snake import Snake
+from .snake import Snake
 
 class Game:
     def __init__(self, stdscr):
@@ -29,7 +29,7 @@ class Game:
             self.speed_level += 1
             new_delay = max(self.base_time - (self.speed_level * 20), 50)
             self.stdscr.timeout(new_delay)
-    def exit(self):
+    def _exit(self):
         self.stdscr.clear()
         msg = "Game Over! Press any key to exit."
         self.stdscr.addstr(self.sr // 2, self.sc // 2 - len(msg) // 2, msg)
@@ -85,4 +85,4 @@ class Game:
             self.stdscr.addstr(0, 0, status[:self.sc-1]) 
             self.stdscr.refresh()
 
-        self.exit()
+        self._exit()

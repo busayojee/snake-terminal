@@ -15,6 +15,7 @@ def print_version(ctx, param, value):
 @click.option("-v", "--version", is_flag=True, callback=print_version,expose_value=False, is_eager=True, help="Show version and exit")
 def main():
     curses.wrapper(play)
+    
 # if __name__ == '__main__':
 #     main()
     
