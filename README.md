@@ -3,7 +3,6 @@
 A classic Snake game implemented in Python, playable directly in your terminal! Built using the `curses` library and a doubly linked list. Now available on PyPI for easy installation and play.
 
 ![Snake Terminal Demo](https://github.com/busayojee/snake-terminal/demo.png)  
-*(Replace with an actual demo GIF or screenshot if available)*
 
 ---
 
